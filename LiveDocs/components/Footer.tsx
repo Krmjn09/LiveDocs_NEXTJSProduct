@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white w-full relative">
       <div className="container mx-auto px-4 py-6">
-       <p className="text-center text-gray-300">
+        <p className="text-center text-gray-300">
           Made with ❤️ by{" Kriti Mahajan "}
         </p>
         <div className="flex justify-center gap-6 mt-3">
@@ -30,7 +30,7 @@ const Footer = () => {
       {/* Chatbot Icon */}
       <div className="fixed bottom-5 right-5 z-50">
         <Button
-          className="p-3 rounded-full bg-blue-500 text-white"
+          className="p-3 rounded-full bg-blue-500 text-black"
           onClick={() => setIsChatbotOpen(!isChatbotOpen)}
         >
           <FiMessageSquare size={24} />

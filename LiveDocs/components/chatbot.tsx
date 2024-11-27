@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import axios from "axios"
 
@@ -37,8 +36,7 @@ const Chatbot = () => {
 
       // Extract the bot's response
       const botResponse =
-        response.data?.contents?.[0]?.parts?.[0]?.text ||
-        "I'm sorry, I couldn't understand that."
+        response.data?.contents?.[0]?.parts?.[0]?.text || "helloo"
       setMessages([...newMessages, { text: botResponse, from: "bot" }])
     } catch (error) {
       console.error("Error communicating with the API:", error)
@@ -65,7 +63,7 @@ const Chatbot = () => {
             <p
               className={`${
                 msg.from === "user"
-                  ? "bg-blue-500 text-white p-2 rounded-md"
+                  ? "bg-blue-500 text-black p-2 rounded-md"
                   : "bg-gray-200 p-2 rounded-md"
               }`}
             >
@@ -91,7 +89,7 @@ const Chatbot = () => {
         />
         <button
           onClick={sendMessage}
-          className="bg-blue-500 text-white px-4 rounded-r-md"
+          className="bg-blue-500 text-black px-4 rounded-r-md"
         >
           Send
         </button>
